@@ -24,8 +24,8 @@ Colepio is available on `crux.land` and `deno.land/x`
 
 Current version:
 
-- `https://crux.land/colepio@1.0.1`
-- `https://deno.land/x/colepio@1.0.1`
+- `https://crux.land/colepio@1.1.0`
+- `https://deno.land/x/colepio@1.1.0`
 
 ## 🎓 Get started
 
