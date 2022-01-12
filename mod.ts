@@ -1,6 +1,7 @@
 export type ParsedArgs = [Map<string, string[]>, string | undefined];
 const KEY_REGEXP = /^--?(.+)$/;
 
+/** Color codes used for coloring help message output */
 export const colors = new Map(
   [
     ["name", "\x1b[32m"],
@@ -11,7 +12,9 @@ export const colors = new Map(
     ["optionDescription", "\x1b[36m"],
     ["argument", "\x1b[31m"],
     ["argumentName", "\x1b[35m"],
-    ["argumentType", "\x1b[32m" as string],
+    ["argumentType", "\x1b[32m"],
+    ["subCommand", "\x1b[31m"],
+    ["subCommandDescription", "\x1b[32m" as string],
   ] as const,
 );
 
@@ -351,7 +354,7 @@ export function createCli(
           helpMessage += `\n${colors.get("category")}Subcommands:\x1b[0m\n`;
           for (const subCmd of subCmds) {
             // deno-fmt-ignore
-            helpMessage += ` » ${subCmd.name} ${subCmd.description ? `– ${subCmd.description}` : ""}\n`;
+            helpMessage += ` » ${colors.get("subCommand")}${subCmd.name}\x1b[0m ${subCmd.description ? `– ${colors.get("subCommandDescription")}${subCmd.description}\x1b[0m` : ""}\n`;
           }
         }
 
