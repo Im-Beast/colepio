@@ -18,6 +18,15 @@ easy creation of
   - Type checked option arguments
 - [Respects `NO_COLOR` env variable](https://no-color.org/)
 
+## Registries
+
+Colepio is available on `crux.land` and `deno.land/x`
+
+Current version:
+
+- `https://crux.land/colepio@1.0.1`
+- `https://deno.land/x/colepio@1.0.1`
+
 ## 🎓 Get started
 
 Look [here](./example.ts) for example of using Colepio
