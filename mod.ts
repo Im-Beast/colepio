@@ -343,7 +343,7 @@ export function createCli(
             ) ?? [];
 
             // deno-fmt-ignore
-            helpMessage += ` » ${colors.get("option")}${aliases.join(`\x1b[0m, ${colors.get("option")}`)}\x1b[0m ${option.description ? `– ${colors.get("optionDescription")}${option.description}\x1b[0m` : ""} » ${args.join(" ")}\n`;
+            helpMessage += ` » ${colors.get("option")}${aliases.join(`\x1b[0m, ${colors.get("option")}`)}\x1b[0m ${option.description ? `– ${colors.get("optionDescription")}${option.description}\x1b[0m` : ""} ${args.length ? "»" : ""} ${args.join(" ")}\n`;
           }
         }
 
